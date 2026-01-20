@@ -1,8 +1,23 @@
-spring:
-  application:
-    name: FakeDataService
-
 server:
   port: 8888
 
+spring:
+  application:
+    name: FakeDataService
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-irmc4lc0ud0pjug3.us.auth0.com/
 
+logging:
+  level:
+    root: ERROR
+    org:
+      springframework:
+        web: ERROR
+        security: INFO
+    com:
+      auth0: TRACE
+    biz:
+      lci: TRACE
